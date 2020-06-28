@@ -1,0 +1,1224 @@
+{
+	"info": {
+		"_postman_id": "65a2298d-f361-4807-a0f6-f02697b7cfb8",
+		"name": "Kolekcja requestów do API",
+		"description": "Kolekcja requestów do API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Klient request",
+			"item": [
+				{
+					"name": "http://localhost:8080/montanashop/client/all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfQURNSU5dIiwibmFtZSI6IkRhbWlhbiIsInN1YiI6IkRhbWlhbiIsImp0aSI6IjIyIiwiaWF0IjoxNTkyNjQ1NjM4LCJleHAiOjE1OTI2NDU5Mzh9.671MffSLk0pDeabbFHSO08Z7zh-kkOgnyiHuK6ApXvI5GvehDpjts99HL7WrZHboUFPlzyIhrGqisYvtrRstKA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"category\": {\r\n            \"name\": \"RTV\"\r\n        },\r\n        \"client\": null,\r\n        \"name\": \"Telewizor SONY LED KD-55XG7077\",\r\n        \"price\": 10000.0,\r\n        \"quantity\": 100,\r\n        \"photo\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlBDca30WAe1d8tu1oIQMB55crHCOshwPLdJMve5McCH03qqf7SElbrrGXsV7pCzYMYNGO-hQ&usqp=CAc\",\r\n        \"positionShopping\": null\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/client/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"client",
+								"all"
+							]
+						},
+						"description": "Pobranie wszytkich klientów/użytkowników "
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/client?id=30",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfQURNSU5dIiwibmFtZSI6IkRhbWlhbiIsInN1YiI6IkRhbWlhbiIsImp0aSI6IjIyIiwiaWF0IjoxNTkyNjQ2NjI2LCJleHAiOjE1OTI2NDg0MjZ9.F_CkvdhBwu_IlAayqoTlJ0qKeJVkSsvwLhV4SuhaGLNfIl9mwLt4ZeJRDQmHafZZyrNtfaq0Ero_MsupHf3Paw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"category\": {\r\n            \"name\": \"RTV\"\r\n        },\r\n        \"client\": null,\r\n        \"name\": \"Telewizor SONY LED KD-55XG7077\",\r\n        \"price\": 10000.0,\r\n        \"quantity\": 100,\r\n        \"photo\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlBDca30WAe1d8tu1oIQMB55crHCOshwPLdJMve5McCH03qqf7SElbrrGXsV7pCzYMYNGO-hQ&usqp=CAc\",\r\n        \"positionShopping\": null\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/client?id=30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"client"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "30"
+								}
+							]
+						},
+						"description": "Pobranie jednego użytkownika po id "
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/client/update-username",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":30,\"username\":\"Krystianek\"} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/client/update-username",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"client",
+								"update-username"
+							]
+						},
+						"description": "Zmian nazwy użyutkownika"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/client/update-password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":30,\"password\":\"XFDSXXXC\"} \r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/client/update-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"client",
+								"update-password"
+							]
+						},
+						"description": "Zmiana hasła użytkownika"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/client/delete/30",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						},
+						"description": "Usuwanie użytkownika"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/client/delete/30",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1ODE1NSwiZXhwIjoxNTkyNjU5OTU1fQ.xnP_RpYeYPiIZzrFrPPl6gr_wz-bK8L2gWrMh04x1E5GinHyryO_JBwswmu-oqZyOI27_OGtpai15vBSkvH-7Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/montanashop/client/delete/30",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"client",
+								"delete",
+								"30"
+							]
+						},
+						"description": "Usuwannie użytkownika"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/register",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"TonyXy\",\"password\":\"XddXdd\",\"email\":\"rigopop1929@rm22xrf.com\",\"enabled\":true,\"accountNonExpired\":true,\"credentialsNonExpired\":true,\"role\":\"ROLE_USER\",\"accountNonLocked\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"register"
+							]
+						},
+						"description": "Dodawanie usera"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Koszyk request",
+			"item": [
+				{
+					"name": "http://localhost:8080/montanashop/shoppingcart?id=26",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/montanashop/shoppingcart?id=26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"shoppingcart"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "26"
+								}
+							]
+						},
+						"description": "Pobranie koszyka po id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/shoppingcart/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/montanashop/shoppingcart/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"shoppingcart",
+								"all"
+							]
+						},
+						"description": "Pobranie wszystkich koszykow"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/shoppingcart/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"id\":10,\r\n     \"shoppingCart\":{\r\n    \"id\": 2,\r\n        \"client\": {\r\n            \"id\": 5,\r\n            \"username\": \"Damianbb\",\r\n            \"password\": \"$2a$10$Vxw0NWkNqKW/omCegBh1t./Pt0P6wcdzsgIUZ/2KyRCo0ClZrrc.u\",\r\n            \"email\": \"mdghwvugdmcyjaghxy@awdrt.org\"\r\n        }\r\n    }\r\n    \"prodyct\":\r\n{\r\n        \"id\": 1,\r\n        \"name\": \"Jabłko\",\r\n        \"price\": 10.0,\r\n        \"quantity\": 5,\r\n        \"photo\": \"D:\\\\Projekty\\\\MontanaShop\\\\MontanaShop\\\\uploads\\\\Chrysanthemum.jpg\",\r\n        \"productDescription\": \"AAAA\",\r\n    }\r\n        \r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/positionshopping/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"positionshopping",
+								"update"
+							]
+						},
+						"description": "Dodanie koszyka dla klienta"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/shoppingcart/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 20,\r\n        \"client\": {\r\n            \"id\":11 \r\n        }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/shoppingcart/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"shoppingcart",
+								"update"
+							]
+						},
+						"description": "Update koszyka"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/shoppingcart/delete?id=22",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"Adolf\",\"password\":\"XddXdd\",\"email\":\"rixgopop159@rm22xrf.com\",\"enabled\":true,\"accountNonExpired\":true,\"credentialsNonExpired\":true,\"role\":\"ROLE_USER\",\"accountNonLocked\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/shoppingcart/delete?id=22",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"shoppingcart",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "22"
+								}
+							]
+						},
+						"description": "Usuwanie koszyka"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Kategoria request",
+			"item": [
+				{
+					"name": "http://localhost:8080/montanashop/category/all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"username\":\"Adolf\",\"password\":\"XddXdd\",\"email\":\"rixgopop159@rm22xrf.com\",\"enabled\":true,\"accountNonExpired\":true,\"credentialsNonExpired\":true,\"role\":\"ROLE_USER\",\"accountNonLocked\":true}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/category/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"category",
+								"all"
+							]
+						},
+						"description": "Wyszukanie wszystkich kategorii"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/category/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n        \"name\": \"Ogród\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/category/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"category",
+								"update"
+							]
+						},
+						"description": "Update kategorii"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/category/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n        \"name\": \"Rowery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/category/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"category",
+								"add"
+							]
+						},
+						"description": "Dodanie kategorii"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/category/delete?id=1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n        \"name\": \"Rowery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/category/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"category",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Usuwanie kategorii"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/category?id=3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJyb2xlIjoiW1JPTEVfVVNFUl0iLCJuYW1lIjoiVG9ueSIsInN1YiI6IlRvbnkiLCJqdGkiOiIzMiIsImlhdCI6MTU5MjY1NjM5NCwiZXhwIjoxNTkyNjU4MTk0fQ.hoIl1ShMiQz_AFEpSm7TWaBvHWF0E2V2pjUBZEG6fIz6CmA8O8pAfeboZLPC4WdSxabRrCq49_uBbTqyjCZmhg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":1,\r\n        \"name\": \"Rowery\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/category?id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"category"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						},
+						"description": "Wyszukanie kategorii po id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pozycja w koszyku request",
+			"item": [
+				{
+					"name": "http://localhost:8080/montanashop/positionshopping?id=1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client\": {\r\n            \"id\": 5\r\n        }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/positionshopping?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"positionshopping"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Wyszukanie pozycji po id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/positionshopping/all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client\": {\r\n            \"id\": 5\r\n        }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/positionshopping/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"positionshopping",
+								"all"
+							]
+						},
+						"description": "Wyszuykanie wszystkich pozycji"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/positionshopping/delete?id=6",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client\": {\r\n            \"id\": 5\r\n        }\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/positionshopping/delete?id=6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"positionshopping",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "6"
+								}
+							]
+						},
+						"description": "Usuwanie pozycji koszyka"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/positionshopping/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"shoppingCart\":{\r\n    \"id\": 1,\r\n        \"client\": {\r\n            \"id\": 5,\r\n            \"username\": \"Damianbb\",\r\n            \"password\": \"$2a$10$Vxw0NWkNqKW/omCegBh1t./Pt0P6wcdzsgIUZ/2KyRCo0ClZrrc.u\",\r\n            \"email\": \"mdghwvugdmcyjaghxy@awdrt.org\"\r\n        }\r\n    },\r\n\r\n    \"prodyct\":\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"Jabłko\",\r\n        \"price\": 10.0,\r\n        \"quantity\": 5,\r\n        \"photo\": \"D:\\\\Projekty\\\\MontanaShop\\\\MontanaShop\\\\uploads\\\\Chrysanthemum.jpg\",\r\n        \"productDescription\": \"AAAA\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/positionshopping/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"positionshopping",
+								"add"
+							]
+						},
+						"description": "Dodawanie pozycji koszyka"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/positionshopping/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"id\":5,\r\n     \"shoppingCart\":{\r\n    \"id\": 2\r\n    },\r\n\r\n    \"prodyct\":\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"Jabłko\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/positionshopping/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"positionshopping",
+								"update"
+							]
+						},
+						"description": "Update pozycji w koszyku\r\n"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Produkt request",
+			"item": [
+				{
+					"name": "http://localhost:8080/montanashop/product/all",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"id\":5,\r\n     \"shoppingCart\":{\r\n    \"id\": 2\r\n    },\r\n\r\n    \"prodyct\":\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"Jabłko\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/product/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"product",
+								"all"
+							]
+						},
+						"description": "Wyszukanie wszystkich produktów"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/product?id=1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n     \"id\":5,\r\n     \"shoppingCart\":{\r\n    \"id\": 2\r\n    },\r\n\r\n    \"prodyct\":\r\n    {\r\n        \"id\": 1,\r\n        \"name\": \"Jabłko\"\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/product?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"product"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Wyszukanie produktu po id"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/product/add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product",
+									"value": "{\n        \"name\": \"Kurczak\",\n        \"price\": 15.0,\n        \"quantity\": 20,\n       \"productDescription\":\"kurczak\"}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "idCategory",
+									"value": "1",
+									"contentType": "text/plain",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"value": null,
+									"contentType": "image/jpeg",
+									"type": "file"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/product/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"product",
+								"add"
+							]
+						},
+						"description": "Dodawanie produktu"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/product/update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product",
+									"value": "{\"id\":\"1\",\n        \"name\": \"Mięso\",\n        \"price\": 15.0,\n        \"quantity\": 20,\n    \"productDescription\":\"kurczak\"\n}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "idCategory",
+									"value": "1",
+									"contentType": "text/plain",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"value": null,
+									"contentType": "image/jpeg",
+									"type": "file"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/product/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"product",
+								"update"
+							]
+						},
+						"description": "Update produktu"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/montanashop/product/delete?id=1",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product",
+									"value": "{\"id\":\"1\",\n        \"name\": \"Mięso\",\n        \"price\": 15.0,\n        \"quantity\": 20,\n    \"productDescription\":\"kurczak\"\n}",
+									"contentType": "application/json",
+									"type": "text"
+								},
+								{
+									"key": "idCategory",
+									"value": "1",
+									"contentType": "text/plain",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"value": null,
+									"contentType": "image/jpeg",
+									"type": "file"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/montanashop/product/delete?id=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"montanashop",
+								"product",
+								"delete"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "usuwanie produktu"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "8762923a-8530-417d-8a7d-15db0032506e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "36ff85f8-acf2-46d6-b351-e9ed8d7c3a1b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
